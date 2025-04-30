@@ -10,3 +10,7 @@ The goal of this repository is to create estimates of the following variable:
 
 1.  Create estimates for all 4 states, reported as 4 separate measures, one for each state, saved in `outputs/ZZ6_estimates_indiv_date.csv`
 2.  Create estimates for all 4 states, reported as State 1, State 2, and "State 3 + 4", saved in `outputs/ZZ6_estimates_combined_date.csv`
+
+To view already-made estimates, look in the `outputs` folder. The file titled `…indiv…` has one estimate for **each** ADM1 region. The file titled `…combined…` has one estimate each for regions 1 ann 2, and a **combined** estimate for regions 3 and 4.
+
+To re-calculate estimates, run `run_this.R`
