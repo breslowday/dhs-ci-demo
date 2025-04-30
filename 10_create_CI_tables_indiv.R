@@ -1,11 +1,6 @@
 # 10_create_CI_tables.R
 
 
-# here we'll list all of the files we have
-library(here)
-
-source("01_functions.R")
-
 #path for files -- enter here
 dhs_dirpath <- here("inputs/")
 #this looks for .DTA files in the dhs_dirpath above.
@@ -20,7 +15,6 @@ for(i in survey_files)
   
   #get CIs
   calculate_output_CI(in_surv, append = "indiv")
-  
 }
 
 
