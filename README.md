@@ -8,5 +8,5 @@ The goal of this repository is to create estimates of the following variable:
 
 **Measles vaccine received (`h9`), at least 1 dose, in children aged 12-23 months, from either source (recall or card).**
 
-1.  Create estimates for all 4 states, reported as 4 separate measures, one for each state
-2.  Create estimates for all 4 states, reported as State 1, State 2, and "State 3 + 4)
+1.  Create estimates for all 4 states, reported as 4 separate measures, one for each state, saved in `outputs/ZZ6_estimates_indiv_date.csv`
+2.  Create estimates for all 4 states, reported as State 1, State 2, and "State 3 + 4", saved in `outputs/ZZ6_estimates_combined_date.csv`

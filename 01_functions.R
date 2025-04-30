@@ -154,14 +154,15 @@ calculate_output_CI <- function(KRvac, append = "")
     adm1_svyglm <- summary((svyglm(ch_meas_either~ 1, design = adsub, family = "quasibinomial")))
     adm1_labels[i, 4] <- adm1_svyglm$coefficients[1]
     adm1_labels[i, 5] <- adm1_svyglm$coefficients[2]
-    # adsub = subset(DHSdesign,v024==i)
-    # adm1_svyglm <- summary((svyglm(ch_meas_either~ 1, design = adsub, family = "quasibinomial")))
-    # estimate <- adm1_svyglm$coefficients[1]
-    # se <- adm1_svyglm$coefficients[2]
+   
     # here we can add in the row binding structure to append these values to the full outcome for each adm1
     # we'll also need to add in which survey, and which labelled adm1 region it is.
   }
   
+  # we can also create a file of the mean and SE of coverage for each state that is not in logit form
+  adm1_labels <- adm1_labels %>% mutate(transformed_estimate = plogis(estimate),
+                                        transformed_lb       = plogis(estimate - 1.96*se),
+                                        transformed_ub       = plogis(estimate + 1.96*se))
   #filename of mean and se
   fn_mean_se = paste0(unique(KRvac$v000), "_estimates_", append, "_", today(), ".csv")
   write_csv(adm1_labels, here("outputs", fn_mean_se))
