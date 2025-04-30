@@ -13,4 +13,6 @@ The goal of this repository is to create estimates of the following variable:
 
 To view already-made estimates, look in the `outputs` folder. The file titled `…indiv…` has one estimate for **each** ADM1 region. The file titled `…combined…` has one estimate each for regions 1 ann 2, and a **combined** estimate for regions 3 and 4.
 
-To re-calculate estimates, run `run_this.R`
+The columns beginning with `transformed` show the proportion vaccinated, and the upper and lower bounds (95%CI).
+
+To re-calculate estimates, run `run_this.R` . This will only overwrite existing estimates locally.
